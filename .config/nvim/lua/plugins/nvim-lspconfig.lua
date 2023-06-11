@@ -13,7 +13,15 @@ return {
     -- The following example advertise capabilities to `clangd`.
     require'lspconfig'.clangd.setup {
       capabilities = capabilities,
-    }  
+      cmd = { 
+          "clangd", 
+          "--background-index",
+          "-j=40",
+          "--pch-storage=memory",
+          "--clang-tidy"
+      },
+    }
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
   end,
   keys = {
       { "<leader>ls", "<cmd>lua vim.lsp.buf.document_symbol()<CR>", desc = "list symbols"},
