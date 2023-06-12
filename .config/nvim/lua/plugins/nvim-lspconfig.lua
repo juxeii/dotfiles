@@ -21,6 +21,7 @@ return {
           "--clang-tidy"
       },
     }
+    require'lspconfig'.pyright.setup{}
     vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
   end,
   keys = {
