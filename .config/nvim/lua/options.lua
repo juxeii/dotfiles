@@ -8,10 +8,10 @@ vim.g.mapleader = ' '
 vim.opt.number = true
 
 -- window navigation
-vim.keymap.set('n', '<C-h>', '<C-w>h<CR>')
-vim.keymap.set('n', '<C-j>', '<C-w>j<CR>')
-vim.keymap.set('n', '<C-k>', '<C-w>k<CR>')
-vim.keymap.set('n', '<C-l>', '<C-w>l<CR>')
+vim.keymap.set('n', '<C-h>', '<C-w>h')
+vim.keymap.set('n', '<C-j>', '<C-w>j')
+vim.keymap.set('n', '<C-k>', '<C-w>k')
+vim.keymap.set('n', '<C-l>', '<C-w>l')
 
 -- use spaces for tabs and whatnot
 vim.opt.tabstop = 2
