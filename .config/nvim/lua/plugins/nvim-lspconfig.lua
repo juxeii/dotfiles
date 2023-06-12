@@ -20,14 +20,15 @@ return {
           "--pch-storage=memory",
           "--clang-tidy"
       },
+      on_attach = function(client, bufnr)
+        local bufopts = { noremap=true, silent=true, buffer=bufnr }
+        vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+        vim.keymap.set('n', 'lr', vim.lsp.buf.rename, bufopts)
+      end 
     }
     require'lspconfig'.pyright.setup{}
     vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
-  end,
-  keys = {
-      { "<leader>ls", "<cmd>lua vim.lsp.buf.document_symbol()<CR>", desc = "list symbols"},
-      { "<leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", desc = "goto declaration"},
-      { "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>", desc = "goto definition"},
-      { "<leader>K", "<cmd>lua vim.lsp.buf.hover()<CR>", desc = "hover"},
-  },
+  end
 }
