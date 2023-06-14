@@ -12,6 +12,10 @@ M.setup = function()
 end
 
 M.on_attach = function(client, bufnr)
+    if client.name == "clangd" then
+        local opts = { noremap = true, silent = true }
+        vim.keymap.set("n", "<leader>s", "<cmd>ClangdSwitchSourceHeader<cr>", opts)
+    end
     lsp_keymaps(bufnr)
 end
 
