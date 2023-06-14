@@ -1,6 +1,0 @@
-return {
-    "sbdchd/neoformat",
-    keys = {
-      { "<leader>F", "<cmd>:Neoformat<CR>", desc = "format buffer"},
-  },
-}   
