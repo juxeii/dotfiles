@@ -2,6 +2,7 @@ local servers = {
     "clangd",
     "pyright",
     "lua_ls",
+    "cmake"
 }
 
 require("mason").setup({
