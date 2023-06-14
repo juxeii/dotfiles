@@ -16,6 +16,6 @@ keymap('n', '<C-l>', '<C-w>l', opts)
 keymap('n', 't', '<C-]>', opts)
 
 -- Apps
-keymap('n', '<leader>f', '<cmd>Telescope find_files<cr>', opts)
-keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', opts)
+keymap('n', '<leader>f', '<cmd>lua require("fzf-lua").files()<CR>', opts)
+keymap('n', '<leader>b', '<cmd>lua require("fzf-lua").buffers()<CR>', opts)
 keymap('n', '<leader>S', '<cmd>lua require("spectre").open()<CR>', opts)
