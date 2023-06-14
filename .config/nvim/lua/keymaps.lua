@@ -14,3 +14,6 @@ keymap('n', '<C-l>', '<C-w>l', opts)
 
 -- Follow tags
 keymap('n', 't', '<C-]>', opts)
+
+-- Apps
+keymap('n', '<leader>f', '<cmd>Telescope find_files<cr>', opts)
