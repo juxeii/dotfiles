@@ -17,3 +17,4 @@ keymap('n', 't', '<C-]>', opts)
 
 -- Apps
 keymap('n', '<leader>f', '<cmd>Telescope find_files<cr>', opts)
+keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', opts)
