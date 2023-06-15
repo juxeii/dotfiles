@@ -7,10 +7,14 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Better window navigation
-keymap('n', '<C-h>', '<C-w>h', opts)
-keymap('n', '<C-j>', '<C-w>j', opts)
-keymap('n', '<C-k>', '<C-w>k', opts)
-keymap('n', '<C-l>', '<C-w>l', opts)
+--keymap('n', '<C-h>', '<C-w>h', opts)
+--keymap('n', '<C-j>', '<C-w>j', opts)
+--keymap('n', '<C-k>', '<C-w>k', opts)
+--keymap('n', '<C-l>', '<C-w>l', opts)
+keymap('n', '<C-h>', '<cmd> TmuxNavigationLeft<CR>', opts)
+keymap('n', '<C-l>', '<cmd> TmuxNavigationRight<CR>', opts)
+keymap('n', '<C-j>', '<cmd> TmuxNavigationDown<CR>', opts)
+keymap('n', '<C-k>', '<cmd> TmuxNavigationUp<CR>', opts)
 
 -- Follow tags
 keymap('n', 't', '<C-]>', opts)
