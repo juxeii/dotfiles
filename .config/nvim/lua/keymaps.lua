@@ -21,10 +21,13 @@ keymap('n', 't', '<C-]>', opts)
 
 -- Apps
 
+-- nvim-tree
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>c", "<cmd>Bwipeout<CR>", opts)
 -- fzf-lua
 keymap('n', '<leader>f', '<cmd>lua require("fzf-lua").files()<CR>', opts)
 keymap('n', '<leader>b', '<cmd>lua require("fzf-lua").buffers()<CR>', opts)
 -- spectre
 keymap('n', '<leader>S', '<cmd>lua require("spectre").open()<CR>', opts)
 -- trouble
-keymap('n', '<leader>xx', '<cmd>TroubleToggle<cr>', opts)
+keymap('n', '<leader>xx', '<cmd>TroubleToggle document_diagnostics<cr>', opts)
