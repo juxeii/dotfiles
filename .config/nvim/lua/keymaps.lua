@@ -20,6 +20,11 @@ keymap('n', '<C-k>', '<cmd> TmuxNavigationUp<CR>', opts)
 keymap('n', 't', '<C-]>', opts)
 
 -- Apps
+
+-- fzf-lua
 keymap('n', '<leader>f', '<cmd>lua require("fzf-lua").files()<CR>', opts)
 keymap('n', '<leader>b', '<cmd>lua require("fzf-lua").buffers()<CR>', opts)
+-- spectre
 keymap('n', '<leader>S', '<cmd>lua require("spectre").open()<CR>', opts)
+-- trouble
+keymap('n', '<leader>xx', '<cmd>TroubleToggle<cr>', opts)
