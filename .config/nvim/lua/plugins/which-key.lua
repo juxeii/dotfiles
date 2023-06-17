@@ -6,6 +6,6 @@ return {
         vim.o.timeoutlen = 300
     end,
     opts = {
-        triggers = {"<leader>"},
-    }
+        triggers = { "<leader>" },
+    },
 }
