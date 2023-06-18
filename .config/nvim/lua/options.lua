@@ -1,15 +1,32 @@
+local opt = vim.opt
+
 -- Lines
-vim.opt.number = true
+opt.wrap = false
+opt.number = true
+opt.relativenumber = true
 
 -- Tabs & spaces
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.shiftround = true
-vim.opt.expandtab = true
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+opt.shiftround = true
+opt.autoindent = true
+
+-- Search
+opt.ignorecase = true
+opt.smartcase = true
+
+-- Split windows
+opt.splitright = true
+opt.splitbelow = true
 
 -- Style
-vim.opt.cursorline = true
-vim.g.termguicolors = true
+opt.cursorline = true
+opt.termguicolors = true
+opt.background = "dark"
+opt.signcolumn = "yes"
 
 -- Misc
-vim.opt.clipboard = "unnamedplus"
+opt.iskeyword:append("-")
+opt.backspace = "indent,eol,start"
+opt.clipboard:append("unnamedplus")
