@@ -9,6 +9,11 @@ local function lsp_keymaps(bufnr)
 end
 
 M.setup = function()
+    local config = {
+        virtual_text = false,
+    }
+
+    vim.diagnostic.config(config)
 end
 
 M.on_attach = function(client, bufnr)
