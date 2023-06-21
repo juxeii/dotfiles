@@ -27,6 +27,7 @@ opt.background = "dark"
 opt.signcolumn = "yes"
 
 -- Misc
+opt.mouse = r
 opt.exrc = true
 opt.iskeyword:append("-")
 opt.backspace = "indent,eol,start"
