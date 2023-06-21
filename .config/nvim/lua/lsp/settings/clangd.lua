@@ -9,9 +9,9 @@ cmd = {
 }
 
 local cwd = vim.fn.getcwd(-1, -1)
-if cwd == '/workspace/cplane' then
+if cwd == '/var/fpwork/reiss/gnb/cplane' then
     table.insert(cmd, "--compile-commands-dir=build")
-elseif cwd == '/workspace/cplane/CP-RT/CP-RT' then
+elseif cwd == '/var/fpwork/reiss/gnb/cplane/CP-RT/CP-RT' then
     table.insert(cmd, "--compile-commands-dir=build")
 end
 

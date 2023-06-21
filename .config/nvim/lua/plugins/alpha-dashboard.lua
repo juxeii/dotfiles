@@ -17,11 +17,11 @@ return {
             "$$$$$$$$/ $$$$$$$$/  $$$$$$/  $$/   $$/       $$/   ",
         }
         dashboard.section.buttons.val = {
-            dashboard.button("<leader>e", "  File explorer", "<cmd>NvimTreeToggle<CR>"),
-            dashboard.button("<leader>f", "󰍉  Find file", "<cmd>lua require('fzf-lua').files()<CR>"),
+            dashboard.button("<leader>e", "  File explorer"),
+			dashboard.button("<leader>f", "󰍉  Find file"),
             dashboard.button("a", "  New file", ":ene <BAR> startinsert <CR>"),
-            dashboard.button("<leader>r", "  Recently used files", "<cmd>lua require('fzf-lua').oldfiles()<CR>"),
-            dashboard.button("<leader>lg", "󱎸  Find text", "<cmd>lua require('fzf-lua').live_grep()<CR>"),
+            dashboard.button("<leader>r", "  Recently used files"),
+            dashboard.button("<leader>lg", "󱎸  Find text"),
             dashboard.button("c", "  Configuration", "<cmd>NvimTreeOpen ~/.config/nvim<CR>"),
         }
 

@@ -1,4 +1,4 @@
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- Remap space as leader key
@@ -25,7 +25,8 @@ keymap("n", "t", "<C-]>", opts)
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>c", "<cmd>Bwipeout<CR>", opts)
 -- fzf-lua
-keymap("n", "<leader>f", '<cmd>lua require("fzf-lua").files()<CR>', opts)
+keymap("n", "<leader>f", '<cmd>lua require("plugins/fzf-lua").custom_files()<CR>', opts)
+
 keymap("n", "<leader>b", '<cmd>lua require("fzf-lua").buffers()<CR>', opts)
 keymap("n", "<leader>r", '<cmd>lua require("fzf-lua").oldfiles()<CR>', opts)
 keymap("n", "<leader>lg", '<cmd>lua require("fzf-lua").live_grep()<CR>', opts)
