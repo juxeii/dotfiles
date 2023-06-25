@@ -5,7 +5,8 @@ cmd = {
     "--background-index",
     "-j=40",
     "--pch-storage=memory",
-    "--clang-tidy"
+    "--clang-tidy",
+    "--offset-encoding=utf-32"
 }
 
 local cwd = vim.fn.getcwd(-1, -1)
